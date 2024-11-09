@@ -46,19 +46,18 @@ export const TemplateRoot: React.FC<Props> = ({
         <HeaderView>
           {page === 'home' && (
             <AlignTitleView>
-              {theme === 'light' ? (
-                <LogoView
-                  theme={theme}
-                  source={require('../../../assets/logo.png')}
-                />
-              ) : (
-                <LogoView
-                  theme={theme}
-                  source={require('../../../assets/logo-white.png')}
-                />
-              )}
               <AlignTextView>
-                <TitleView theme={theme}>SEVENTEEN</TitleView>
+                {theme === 'light' ? (
+                  <LogoView
+                    theme={theme}
+                    source={require('../../../assets/logo.png')}
+                  />
+                ) : (
+                  <LogoView
+                    theme={theme}
+                    source={require('../../../assets/logo-white.png')}
+                  />
+                )}
                 <SubTitleView theme={theme}>WALLPAPER</SubTitleView>
               </AlignTextView>
             </AlignTitleView>

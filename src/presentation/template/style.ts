@@ -44,7 +44,7 @@ export const AlignTitleView = styled.View`
 export const AlignTextView = styled.View``;
 
 export const SubTitleView = styled.Text<Props>`
-  font-size: 12px;
+  font-size: 14px;
   color: ${(props) => (props.theme === 'light' ? '#898da1' : '#9f9f9f')};
 `;
 export const TitleView = styled.Text<Props>`
@@ -56,6 +56,6 @@ export const TitleView = styled.Text<Props>`
 export const PressableView = styled.Pressable``;
 
 export const LogoView = styled.Image<Props>`
-  width: 40px;
-  height: 35px;
+  width: 155px;
+  height: 25px;
 `;
