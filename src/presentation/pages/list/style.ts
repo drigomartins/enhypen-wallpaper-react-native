@@ -1,13 +1,11 @@
 import styled from 'styled-components/native';
 import { StyleSheet } from 'react-native';
 
-export const TextView = styled.Text`
-  width: 100%;
-  color: #fff;
-  margin-top: -60px;
-  padding: 20px;
-  font-size: 20px;
-  text-shadow: #000 1px 1px 10px;
+export const TextView = styled.View`
+  padding: 2px 5px;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
 `;
 export const ContainerView = styled.ScrollView`
   width: 100%;
@@ -22,6 +20,7 @@ export const PressableView = styled.Pressable`
   margin-bottom: 15px;
   background-color: #fff;
   margin: 2%;
+  position: relative;
 `;
 export const ImageView = styled.Image`
   width: 100%;

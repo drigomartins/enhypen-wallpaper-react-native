@@ -7,13 +7,20 @@ import {
 import { FlatList } from 'react-native';
 import { BannerAd, BannerAdSize } from 'react-native-google-mobile-ads';
 import { Image } from 'expo-image';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 import { WallpaperItem } from '@/domain';
 import { wallpaperList } from '@/infra';
 import { TemplateRoot } from '@/presentation/template';
 import { useTheme } from '@/presentation/context';
 
-import { ContainerView, ContentAds, PressableView, styles } from './style';
+import {
+  ContainerView,
+  ContentAds,
+  PressableView,
+  styles,
+  TextView,
+} from './style';
 import { Props } from './type';
 
 const blurhash =
@@ -21,7 +28,7 @@ const blurhash =
 const interstitial = InterstitialAd.createForAdRequest(TestIds.INTERSTITIAL);
 
 export const List: React.FC<Props> = ({ navigation }) => {
-  const { category, setWallpaper } = useTheme();
+  const { category, setWallpaper, theme } = useTheme();
   const [filteredWallpaper, setFilteredWallpaper] = useState<WallpaperItem[]>(
     []
   );
@@ -85,6 +92,13 @@ export const List: React.FC<Props> = ({ navigation }) => {
                 contentFit="cover"
                 transition={1000}
               />
+              <TextView>
+                <Ionicons
+                  name={'enter'}
+                  size={25}
+                  color={theme === 'light' ? '#292d3e' : '#ffffff'}
+                />
+              </TextView>
             </PressableView>
           )}
         />
